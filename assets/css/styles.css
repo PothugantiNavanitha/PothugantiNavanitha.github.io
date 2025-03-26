@@ -1,13 +1,72 @@
-.container {
-  position: fixed;
-  overflow: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  scroll-behavior: smooth;
-  height: 100%;
+/* .container { */
+  /* position: fixed; */
+  /* overflow: auto; */
+  /* top: 0; */
+  /* left: 0; */
+  /* bottom: 0; */
+  /* right: 0; */
+  /* scroll-behavior: smooth; */
+  /* height: 100%; */
+/* } */
+*{
+  margin: 0px;
 }
+body{
+  background-color: rgb(240, 240, 247);
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.header{
+  display: flex;
+  justify-content:center;
+  gap: 60px;
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+}
+
+.typing::after {
+  content: "Web Developer"; 
+  font-size: 30px;
+  color: black;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  border-right: 3px solid black; 
+  width: 0;
+  animation: typing 1s steps(15) infinite alternate, blink 10s infinite;
+}
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
+}
+@keyframes blink {
+  50% { border-color: black; }
+}
+@keyframes changeText {
+  0%, 100% { content: "3rd year BTech graduate"; }
+}
+.typing::after {
+  animation: typing 5s steps(30) infinite alternate, blink 0.6s infinite, changeText 6s infinite;
+}
+.content{
+  color: black;
+  padding: 120px;
+  flex:1;
+}
+.container{
+  display: flex;
+}
+.background {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space text and image */
+  padding: 20px;
+}
+
 
 .header-row {
   background-color: orange;
@@ -20,6 +79,10 @@
 
 .header-row .box {
   padding: 10px;
+}
+.section {
+  padding: 100px 50px;
+  text-align: center;
 }
 
 .header-row li {
@@ -39,6 +102,7 @@
 .row {
   padding: 100px;
   height: 75%;
+  background-color: white;
 }
 
 .row .box {
@@ -60,4 +124,9 @@ button {
   color: white;
   border: none;
   border-radius: 10%;
+}
+.image-content img {
+  width: 500px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 65%; /* Optional: Makes the image circular */
 }
