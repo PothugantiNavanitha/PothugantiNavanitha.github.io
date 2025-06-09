@@ -47,7 +47,7 @@ a{
   50% { border-color: black; }
 }
 @keyframes changeText {
-  0%, 100% { content: " BTech graduate"; }
+  0%, 100% { content: "BTech graduate"; }
 }
 .typing::after {
   animation: typing 5s steps(30) infinite alternate, blink 0.6s infinite, changeText 6s infinite;
